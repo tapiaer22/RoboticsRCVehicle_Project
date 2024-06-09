@@ -12,6 +12,16 @@
 
 ## Code explanation
 
+### Vehicle Actions
+* Move Forward
+* Stop
+* Turn Left
+* Turn Right
+
+![Functions with Actions](/Images/RC_Actions.png)
+
+---
+
 ### Vehicle Stopping Distance
 #### Margin Error on Distance
 Based on testing with distance sensors, there was a margin error of 0.2cm. 
@@ -27,6 +37,7 @@ After testing the front sensors with `velocity` at 101, the RC Car is able to sa
 There are a massive amounts of scenarios on how the car would or should move. For the sake of this project, we focused on fundamental scenarios.
 
 ---
+
 ### Vehicle Steering
 #### Steering Left and Right
 The vehicle should turn only when it detects a close obstacle on the sides. If an obstacle is too close to the left, it should avoid a collision by turning right. Analogously, the vehicle should turn left if it is too close to the right. To solve this problem, add the distances from each side:
@@ -51,9 +62,10 @@ Using degrees, by how many degrees should the vehicle turn? this varies based on
 #### Model of Vehicle's Safe Area
 It was necessary to establish a vehicle's safe area. The code was designed so that if an obstacle is detected WITHIN the safe area then the vehicle has to take action to avoid it.
 
-(Image of model here) 
+![Safe Area Model](/Images/Safe_Area_Model.png)
 
 ---
+
 ### Challenges and Future Improvements
 #### Reducing the number of operations
 The functions and algorithm were designed with the intent to reduce the number of operations. Still, there could be potential improvements and optimized models that may require further research.
